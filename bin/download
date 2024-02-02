@@ -17,10 +17,12 @@ release_file="${ASDF_DOWNLOAD_PATH}/${TOOL_NAME}-${ASDF_INSTALL_VERSION}.tar.gz"
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
 
 # Extract contents of tar.gz file into the download directory
-( 
+(
   cd "$ASDF_DOWNLOAD_PATH"
   tar -zxf "$release_file" tfswitch || fail "Could not extract $release_file"
 )
 
 # Remove the archive since we don't need to keep it
 rm -f "$release_file"
+
+# lorem ipsum
